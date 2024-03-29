@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { LuChevronRight, LuCopy } from "@qwikest/icons/lucide";
+import { useCopyClipboard } from "../../../../";
 import { Button } from "../ui/button/button";
 
 interface InstallProps {
@@ -7,6 +8,7 @@ interface InstallProps {
     bgVariant: "foreground" | "background";
 }
 export default component$<InstallProps>((props) => {
+    const { copy, isCopying, setCopy } = useCopyClipboard();
     return (
         <div
             class={`flex justify-between bg-${props.bgVariant} p-4 rounded gap-5 w-full h-20 items-center text-center`}
@@ -19,10 +21,10 @@ export default component$<InstallProps>((props) => {
                 look="secondary"
                 size="sm"
                 class="font-sans"
-                onClick$={() => console.log(props.path)}
+                onClick$={() => setCopy(props.path)}
             >
                 <LuCopy class="mr-2" />
-                Copy
+                {isCopying.value ? "Copying..." : copy.value ? "Copied" : "Copy"}
             </Button>
         </div>
     );
