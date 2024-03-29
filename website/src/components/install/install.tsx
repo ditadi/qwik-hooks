@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
+import { useCopyClipboard } from "@ditadi/qwik-hooks";
 import { LuChevronRight, LuCopy } from "@qwikest/icons/lucide";
-import { useCopyClipboard } from "../../../../";
 import { Button } from "../ui/button/button";
 
 interface InstallProps {

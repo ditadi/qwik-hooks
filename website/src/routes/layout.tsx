@@ -14,7 +14,7 @@ export default component$(() => {
     return (
         <main class="p-12 min-h-screen bg-background border-foreground border-[1rem] rounded-sm flex flex-col">
             <Header />
-            <Disclaimer/>
+            <Disclaimer />
             <Slot />
         </main>
     );

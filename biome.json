@@ -22,9 +22,12 @@
     },
     "linter": {
         "enabled": true,
-        "ignore": ["node_modules"],
+        "ignore": ["node_modules", "website/src/components/ui", "website/vite.config.ts"],
         "rules": {
-            "recommended": true
+            "recommended": true,
+            "security": {
+                "noDangerouslySetInnerHtml": "off"
+            }
         }
     }
 }

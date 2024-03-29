@@ -1,6 +1,6 @@
 import { type PropsOf, component$ } from "@builder.io/qwik";
+import { useCopyClipboard } from "@ditadi/qwik-hooks";
 import { cn } from "@qwik-ui/utils";
-import { useCopyClipboard } from "../../../../";
 import { Button } from "../ui/button/button";
 
 export type CodeCopyProps = PropsOf<typeof Button> & {
@@ -49,6 +49,7 @@ export function CopyIcon(props: PropsOf<"svg"> & { color?: string }, key: string
             {...props}
             key={key}
         >
+            <title>Copy to Clipboard</title>
             <path
                 class="fill-slate-300 group-hover:fill-slate-100"
                 d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"
@@ -71,6 +72,7 @@ export function ClipboardCheck(props: PropsOf<"svg">, key: string) {
             {...props}
             key={key}
         >
+            <title>Clipboard Check</title>
             <path
                 fill="white"
                 d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042a.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"
