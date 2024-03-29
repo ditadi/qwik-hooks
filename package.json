@@ -1,44 +1,44 @@
 {
-    "name": "@ditadi/qwik-hooks",
-    "version": "0.0.0",
-    "type": "module",
-    "description": "A collection of modern, server-safe qwik hooks",
-    "devDependencies": {
-        "@biomejs/biome": "^1.6.3",
-        "@types/bun": "latest",
-        "vite": "^5.2.7",
-        "vite-tsconfig-paths": "^4.3.2"
-    },
-    "dependencies": {
-        "@builder.io/qwik": "^1.5.1"
-    },
-    "peerDependencies": {
-        "typescript": "^5.0.0"
-    },
-    "author": {
-        "name": "ditadi",
-        "url": "https://github.com/ditadi"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/ditadi/qwik-hooks"
-    },
-    "scripts": {
-        "dev": "cd website && bun run dev",
-        "clean": "tsc --build --clean",
-        "build": "bun run clean && bun run build.lib && bun run build.types",
-        "build.lib": "vite build --mode lib",
-        "build.types": "tsc --emitDeclarationOnly",
-        "release": "bumpp --commit --tag --push && bun run build && npm publish --access public"
-    },
-    "main": "./lib/index.qwik.mjs",
-    "qwik": "./lib/index.qwik.mjs",
-    "types": "./lib/index.d.ts",
-    "exports": {
-        ".": {
-            "import": "./lib/index.qwik.mjs",
-            "require": "./lib/index.qwik.cjs",
-            "types": "./lib/index.d.ts"
-        }
+  "name": "@ditadi/qwik-hooks",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "A collection of modern, server-safe qwik hooks",
+  "devDependencies": {
+    "@biomejs/biome": "^1.6.3",
+    "@types/bun": "latest",
+    "vite": "^5.2.7",
+    "vite-tsconfig-paths": "^4.3.2"
+  },
+  "dependencies": {
+    "@builder.io/qwik": "^1.5.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "author": {
+    "name": "ditadi",
+    "url": "https://github.com/ditadi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ditadi/qwik-hooks"
+  },
+  "scripts": {
+    "dev": "cd website && bun run dev",
+    "clean": "tsc --build --clean",
+    "build": "bun run clean && bun run build.lib && bun run build.types",
+    "build.lib": "vite build --mode lib",
+    "build.types": "tsc --emitDeclarationOnly",
+    "release": "bumpp --commit --tag --push && bun run build && npm publish --access public"
+  },
+  "main": "./lib/index.qwik.mjs",
+  "qwik": "./lib/index.qwik.mjs",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.qwik.mjs",
+      "require": "./lib/index.qwik.cjs",
+      "types": "./lib/index.d.ts"
     }
+  }
 }

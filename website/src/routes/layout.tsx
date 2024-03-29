@@ -1,17 +1,21 @@
-import { component$, Slot } from "@builder.io/qwik";
+import { Slot, component$ } from "@builder.io/qwik";
 import type { RequestHandler } from "@builder.io/qwik-city";
+import Disclaimer from "~/components/layout/disclaimer";
+import Header from "~/components/layout/header";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
-  // Control caching for this request for best performance and to reduce hosting costs:
-  // https://qwik.builder.io/docs/caching/
-  cacheControl({
-    // Always serve a cached response by default, up to a week stale
-    staleWhileRevalidate: 60 * 60 * 24 * 7,
-    // Max once every 5 seconds, revalidate on the server to get a fresh version of this page
-    maxAge: 5,
-  });
+    cacheControl({
+        staleWhileRevalidate: 60 * 60 * 24 * 7,
+        maxAge: 5,
+    });
 };
 
 export default component$(() => {
-  return <Slot />;
+    return (
+        <main class="p-12 min-h-screen bg-background border-foreground border-[1rem] rounded-sm flex flex-col">
+            <Header />
+            <Disclaimer/>
+            <Slot />
+        </main>
+    );
 });
