@@ -1,5 +1,1 @@
-const hello = () => {
-    return "a";
-};
-
-export { hello };
+export { useCopyClipboard } from "./use-copy-clipboard";

@@ -1,5 +1,6 @@
 import { type PropsOf, component$ } from "@builder.io/qwik";
 import { cn } from "@qwik-ui/utils";
+import { useCopyClipboard } from "../../../../";
 import { Button } from "../ui/button/button";
 
 export type CodeCopyProps = PropsOf<typeof Button> & {
@@ -7,10 +8,31 @@ export type CodeCopyProps = PropsOf<typeof Button> & {
 };
 
 export const CodeCopy = component$<CodeCopyProps>(
-    ({ class: outsideClass, ...props }) => {
+    ({ code = "", class: outsideClass, ...props }) => {
+        const { copy, setCopy } = useCopyClipboard();
+
         return (
-            <Button {...props} look="ghost" title={"Copy"} class={cn(outsideClass)}>
-                <CopyIcon />
+            <Button
+                {...props}
+                look="ghost"
+                title={copy.value ? "Copied to Clipboard" : "Copy to Clipboard"}
+                class={cn(outsideClass)}
+                onClick$={async () => {
+                    await setCopy(code);
+                    copy.value = true;
+
+                    setTimeout(() => {
+                        copy.value = false;
+                    }, 4000);
+                }}
+            >
+                {!copy.value ? (
+                    <CopyIcon />
+                ) : (
+                    <div class="flex gap-1">
+                        <ClipboardCheck />
+                    </div>
+                )}
             </Button>
         );
     },
