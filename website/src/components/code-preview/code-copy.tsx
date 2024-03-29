@@ -7,7 +7,7 @@ export type CodeCopyProps = PropsOf<typeof Button> & {
 };
 
 export const CodeCopy = component$<CodeCopyProps>(
-    ({ code = "", class: outsideClass, ...props }) => {
+    ({ class: outsideClass, ...props }) => {
         return (
             <Button {...props} look="ghost" title={"Copy"} class={cn(outsideClass)}>
                 <CopyIcon />
