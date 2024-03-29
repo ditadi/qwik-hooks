@@ -1,11 +1,12 @@
 {
   "name": "@ditadi/qwik-hooks",
-  "version": "0.0.0",
+  "version": "0.0.1-beta.1",
   "type": "module",
   "description": "A collection of modern, server-safe qwik hooks",
   "devDependencies": {
     "@biomejs/biome": "^1.6.3",
     "@types/bun": "latest",
+    "bumpp": "^9.4.0",
     "vite": "^5.2.7",
     "vite-tsconfig-paths": "^4.3.2"
   },
