@@ -7,7 +7,7 @@ type HookDemoProps = {
 export default component$<HookDemoProps>((props) => {
     return (
         <div id="hook-demo" class="flex flex-col gap-4">
-            <span class="font-bold text-secondary text-xl">DEMO:</span>
+            <span class="font-bold text-secondary text-base md:text-xl lg:text-xl">DEMO:</span>
             {props.demo}
         </div>
     );

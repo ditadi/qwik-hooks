@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 
 type QwikHooksProps = {
-    width: number;
+    width: string;
 };
 export default component$((props: QwikHooksProps) => {
     return (

@@ -25,8 +25,8 @@ export default component$(() => {
     }
 
     return (
-        <div class="flex flex-col mx-auto my-16 max-w-[1024px] justify-center gap-10">
-            <div class="flex flex-col bg-foreground gap-10  p-10 rounded">
+        <div class="w-full max-w-[1024px] my-16 mx-auto">
+            <section class="p-5 md:p-[4vw] lg:p-12 pt-0 flex flex-col gap-8 md:gap-[6vw] lg:gap-12 bg-foreground z-0 rounded">
                 <HookHeader title={selectedHook.title} description={selectedHook.highlight} />
                 <HookInstall />
                 <HookDescription description={selectedHook.description} />
@@ -34,10 +34,10 @@ export default component$(() => {
                 <HookReturn title={selectedHook.title} return={selectedHook.return} />
                 <HookDemo demo={selectedHook.demo} />
                 <HookCode code={selectedHook.code} />
-            </div>
+            </section>
 
-            <div id="hook-install" class="flex flex-col gap-4 bg-background">
-                <span class="font-bold text-secondary text-xl">MORE HOOKS:</span>
+            <div id="hook-install" class="flex flex-col gap-2 bg-background mt-4">
+                <span class="font-bold text-secondary text-base md:text-xl lg:text-xl">MORE HOOKS:</span>
                 <HooksList />
             </div>
         </div>

@@ -12,10 +12,10 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 
 export default component$(() => {
     return (
-        <main class="p-12 min-h-screen bg-background border-foreground border-[1rem] rounded-sm flex flex-col">
+        <main class="p-4 md:p-12 min-h-screen bg-background border-foreground border-[1rem] rounded-sm flex flex-col gap-8">
             <Header />
             <Disclaimer />
-            <Slot />
+            <Slot/>
         </main>
     );
 });
