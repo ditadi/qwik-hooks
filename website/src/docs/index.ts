@@ -1,6 +1,7 @@
 import type { JSXOutput } from "@builder.io/qwik";
 
 import useCopyClipboardDoc from "./copy-clipboard/doc";
+import useWindowSize from "./window-size/doc";
 
 export interface HookParams {
     index: string;
@@ -19,10 +20,10 @@ export interface HookDoc {
     title: string;
     highlight: string;
     description: string;
-    params: HookParams[];
+    params: HookParams[] | null;
     return: HookReturn[];
     demo: JSXOutput;
     code: string;
 }
 
-export default [useCopyClipboardDoc] as HookDoc[];
+export default [useCopyClipboardDoc, useWindowSize] as HookDoc[];
