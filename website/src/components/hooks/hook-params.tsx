@@ -2,11 +2,11 @@ import { component$ } from "@builder.io/qwik";
 import type { HookParams } from "~/docs";
 
 type HookParamsProps = {
-    params: HookParams[];
+    params: HookParams[] | null;
 };
 
 export default component$<HookParamsProps>((props) => {
-    if (!props?.params?.length)
+    if (!props.params || !props?.params?.length)
         return (
             <div id="hook-parameters" class="flex flex-col gap-3">
                 <span class="font-bold text-secondary text-lg md:text-xl lg:text-xl">

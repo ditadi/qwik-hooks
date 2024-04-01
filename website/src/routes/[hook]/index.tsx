@@ -37,7 +37,9 @@ export default component$(() => {
             </section>
 
             <div id="hook-install" class="flex flex-col gap-2 bg-background mt-4">
-                <span class="font-bold text-secondary text-base md:text-xl lg:text-xl">MORE HOOKS:</span>
+                <span class="font-bold text-secondary text-base md:text-xl lg:text-xl">
+                    MORE HOOKS:
+                </span>
                 <HooksList />
             </div>
         </div>
