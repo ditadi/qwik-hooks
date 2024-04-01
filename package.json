@@ -1,6 +1,6 @@
 {
     "name": "@ditadi/qwik-hooks",
-    "version": "0.0.1-beta.1",
+    "version": "0.0.1",
     "type": "module",
     "description": "A collection of modern, server-safe qwik hooks",
     "devDependencies": {
