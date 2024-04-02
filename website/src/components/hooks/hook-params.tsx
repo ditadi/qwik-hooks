@@ -22,7 +22,7 @@ export default component$<HookParamsProps>((props) => {
                 <table class="rounded w-full">
                     <thead class="bg-[#393533] text-left text-secondary font-code w-full text-sm">
                         <tr class="w-full">
-                            <th class="p-3 font-normal">Index</th>
+                            <th class="p-3 font-normal">Name</th>
                             <th class="p-3 font-normal">Type</th>
                             <th class="p-3 font-normal">Description</th>
                         </tr>
@@ -31,7 +31,7 @@ export default component$<HookParamsProps>((props) => {
                     <tbody>
                         {props.params.map((param) => (
                             <tr class="border border-solid border-opacity-10 border-yellow-200 text-left text-secondary font-code text-sm">
-                                <td class="py-2 px-3 font-normal">{param.index}</td>
+                                <td class="py-2 px-3 font-normal">{param.name}</td>
                                 <td class="py-2 px-3 font-normal">{param.type}</td>
                                 <td class="py-2 px-3 font-normal min-w-[300px]">
                                     {param.description}

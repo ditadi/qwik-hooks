@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { useWindowSize } from "../../../../";
+import { useWindowSize } from "@ditadi/qwik-hooks";
 
 export default component$(() => {
     const windowSize = useWindowSize();
