@@ -1,9 +1,9 @@
-import { $, component$, useSignal, useTask$ } from "@builder.io/qwik";
+import { $, component$, useSignal } from "@builder.io/qwik";
 import { server$ } from "@builder.io/qwik-city";
+import { useDebounce } from "@ditadi/qwik-hooks";
 import { LuLoader } from "@qwikest/icons/lucide";
 import { Button } from "~/components/ui/button/button";
 import { Input } from "~/components/ui/input/input";
-import { useDebounce } from "../../../../";
 
 type Movie = { Title: string; Year: string };
 

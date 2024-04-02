@@ -1,15 +1,23 @@
-# qwik-hooks
+# qwikHooks 
 
-To install dependencies:
+A collection of modern qwik hooks – from the [@ditadi](https://twitter.com/victorditadi).
 
-```bash
-bun install
-```
+## Standard
 
-To run:
+### Install
 
-```bash
-bun run index.ts
-```
+`npm i -D @ditadi/qwik-hooks`
 
-This project was created using `bun init` in bun v1.0.26. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+### Hooks
+
+- [useDebounce](https://qwik-hooks.vercel.app/usedebounce)
+- [useCopyClipboard](https://qwik-hooks.vercel.app/usecopytoclipboard)
+- [useWindowSize](https://qwik-hooks.vercel.app/useWindowSize)
+
+
+## License
+
+*this project was heavily inspired by usehooks.dev and built with the purpose of increasing qwik ecosystem. by: @victorditadi*
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
