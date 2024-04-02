@@ -10,7 +10,7 @@ export default {
         "The useCopyToClipboard hook is useful because it abstracts the complexity of copying text to the clipboard in a cross-browser compatible manner. It utilizes the modern navigator.clipboard.writeText method if available, which provides a more efficient and secure way to copy text. In case the writeText method is not supported by the browser, it falls back to a traditional method using the document.execCommand(“copy”) approach",
     params: [
         {
-            index: "timeout",
+            name: "timeout",
             type: "number (optional)",
             description:
                 "The timeout in milliseconds to execute the copy operation. Default is 300ms.",
