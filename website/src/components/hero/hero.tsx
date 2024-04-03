@@ -11,9 +11,6 @@ export default component$(() => {
                     A collection of modern qwik hooks.
                     <br />
                 </h1>
-                <h2 class="text-white transform-none font-sans text-[clamp(1rem,2.2vw,1.2rem)]">
-                    from @victorditadi
-                </h2>
             </div>
             <div class="w-full max-w-4xl">
                 <Install bgVariant="foreground" path="npm i -D @ditadi/qwik-hooks" />
