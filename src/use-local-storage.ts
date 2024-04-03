@@ -17,13 +17,9 @@ const useLocalStorage = <T>(key: string, initialValue?: T): UseLocalStorageProps
 
     const listenerLocalStorage = $((listenerKey: string | null) => {
         if (listenerKey !== key) return;
-        const currentItem = localStorage.getItem(key);
 
-        storedValue.value = currentItem
-            ? JSON.parse(currentItem)
-            : initialValue
-              ? initialValue
-              : null;
+        const currentItem = localStorage.getItem(key);
+        storedValue.value = currentItem ? JSON.parse(currentItem) : initialValue || null;
     });
 
     /**
