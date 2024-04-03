@@ -1,4 +1,5 @@
 import { $, useOnWindow, useSignal, useTask$ } from "@builder.io/qwik";
+import { isServer } from "@builder.io/qwik/build";
 
 type WindowSize = {
     width: number;
@@ -22,7 +23,7 @@ const useWindowSize = () => {
      */
 
     useTask$(() => {
-        if (typeof window === "undefined") return;
+        if (isServer) return;
         handleResize();
     });
 
