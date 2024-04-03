@@ -12,12 +12,9 @@ type HookCardProps = {
 };
 export default component$<HookCardProps>((props) => {
     return (
-        <li>
-            <Link
-                href={`/${props.hook.key}`}
-                class="h-full flex flex-col gap-1.5 bg-charcoal rounded-[0.5rem] transition-transform duration-200 ease-in-out"
-            >
-                <Card class="w-full bg-foreground border-transparent col-span-1 transform transition-transform duration-200 ease-in-out hover:scale-110 cursor-pointer">
+        <li class="flex flex-col gap-1.5 bg-charcoal rounded-[0.5rem] transition-transform duration-200 ease-in-out">
+            <Link href={`/${props.hook.key}`}>
+                <Card class="w-full sm:h-40 md:h-60 lg:h-52 bg-foreground border-transparent col-span-1 transform transition-transform duration-200 ease-in-out hover:scale-110 cursor-pointer">
                     <CardHeader class="gap-2">
                         <CardTitle class="text-primary text-xl">{props.hook.title}</CardTitle>
                         <CardDescription class="text-white text-base">

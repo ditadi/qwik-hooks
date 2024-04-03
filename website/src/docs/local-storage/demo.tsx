@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
+import { useLocalStorage } from "@ditadi/qwik-hooks";
 import { Button } from "~/components/ui/button/button";
-import { useLocalStorage } from "../../../../src/use-local-storage";
 
 export default component$(() => {
     const { storedValue, setStoredValue } = useLocalStorage<number>("qwikhooks-demo");
