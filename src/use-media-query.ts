@@ -1,24 +1,24 @@
 import { $, useOnWindow, useSignal, useTask$ } from "@builder.io/qwik";
 import { isServer } from "@builder.io/qwik/build";
 
-const MediaQueryCache = new Map<string, MediaQueryList>();
+const mediaQueryListCache = new Map<string, MediaQueryList>();
 
 const useMediaQuery = (query: string) => {
-    const isMatched = useSignal();
+    const isMatched = useSignal(false);
 
     const updateMatch = $((media: MediaQueryList) => {
         isMatched.value = media.matches;
     });
 
     const listenMediaQuery = $(() => {
-        const mediaQueryCached = MediaQueryCache.get(query);
+        const mediaQueryCached = mediaQueryListCache.get(query);
         if (mediaQueryCached) {
             updateMatch(mediaQueryCached);
             return;
         }
 
         const mediaQueryUncached = window.matchMedia(query);
-        MediaQueryCache.set(query, mediaQueryUncached);
+        mediaQueryListCache.set(query, mediaQueryUncached);
 
         updateMatch(mediaQueryUncached);
     });
