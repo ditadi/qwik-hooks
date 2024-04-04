@@ -1,7 +1,6 @@
 import { component$, useSignal, useTask$ } from "@builder.io/qwik";
 import { useLocation } from "@builder.io/qwik-city";
 import HookCode from "~/components/hooks/hook-code";
-import HookDemo from "~/components/hooks/hook-demo";
 import HookDescription from "~/components/hooks/hook-description";
 import HookHeader from "~/components/hooks/hook-header";
 import HookInstall from "~/components/hooks/hook-install";
@@ -40,7 +39,6 @@ export default component$(() => {
                 <HookDescription description={selectedHook.value.description} />
                 <HookParams params={selectedHook.value.params} />
                 <HookReturn title={selectedHook.value.title} return={selectedHook.value.return} />
-                <HookDemo demo={selectedHook.value.demo} />
                 <HookCode code={selectedHook.value.code} />
             </section>
 
