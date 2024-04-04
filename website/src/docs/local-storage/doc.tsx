@@ -35,6 +35,6 @@ export default {
                 "A function to set the state of the value in the local storage. This function accepts a new value or a function that returns a new value. The value is also saved in the local storage under the provided key.",
         },
     ],
-    demo: <UseLocalStorageDemo />,
+    demo: UseLocalStorageDemo,
     code: UseLocalStorageCode,
 } as HookDoc;

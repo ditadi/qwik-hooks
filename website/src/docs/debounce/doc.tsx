@@ -41,6 +41,6 @@ export default {
                 "A boolean signal that indicates whether the debouncing process is currently active or not.",
         },
     ],
-    demo: <UseDebounceDemo />,
+    demo: UseDebounceDemo,
     code: UseDebounceCode,
 } as HookDoc;

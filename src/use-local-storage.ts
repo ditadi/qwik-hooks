@@ -1,12 +1,12 @@
 import { $, type QRL, type Signal, useOnWindow, useSignal, useTask$ } from "@builder.io/qwik";
 import { isServer } from "@builder.io/qwik/build";
 
-type UseLocalStorageProps<T> = {
+type UseLocalStorageResponse<T> = {
     storedValue: Signal<T | null>;
     setStoredValue: QRL<(newValue: T | null) => void>;
 };
 
-const useLocalStorage = <T>(key: string, initialValue?: T): UseLocalStorageProps<T> => {
+const useLocalStorage = <T>(key: string, initialValue?: T): UseLocalStorageResponse<T> => {
     const storedValue = useSignal<T | null>(null);
 
     const setStoredValue = $((newValue: T | null) => {

@@ -16,6 +16,6 @@ export default {
             description: "The current width and height of the window, in pixels.",
         },
     ],
-    demo: <UseWindowSizeDemo />,
+    demo: UseWindowSizeDemo,
     code: UseWindowSizeCode,
 } as HookDoc;
