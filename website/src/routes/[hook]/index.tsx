@@ -1,8 +1,12 @@
 import { component$, useSignal, useTask$ } from "@builder.io/qwik";
 import { useLocation } from "@builder.io/qwik-city";
 import HookDemo from "~/components/hooks/hook-demo";
+import HookDescription from "~/components/hooks/hook-description";
 import HookHeader from "~/components/hooks/hook-header";
 import HookInstall from "~/components/hooks/hook-install";
+import HookParams from "~/components/hooks/hook-params";
+import HookReturn from "~/components/hooks/hook-return";
+import HooksList from "~/components/hooks/hooks-list";
 import ListOfHooks from "~/docs/index";
 
 export default component$(() => {
@@ -32,6 +36,9 @@ export default component$(() => {
                     description={selectedHook.value.highlight}
                 />
                 <HookInstall />
+                <HookDescription description={selectedHook.value.description} />
+                <HookParams params={selectedHook.value.params} />
+                <HookReturn title={selectedHook.value.title} return={selectedHook.value.return} />
                 <HookDemo demo={selectedHook.value.demo} />
             </section>
 
@@ -39,6 +46,7 @@ export default component$(() => {
                 <span class="font-bold text-secondary text-base md:text-xl lg:text-xl">
                     MORE HOOKS:
                 </span>
+                <HooksList />
             </div>
         </div>
     );
