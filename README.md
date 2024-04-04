@@ -10,11 +10,12 @@ A collection of modern qwik hooks – from the [@ditadi](https://twitter.com/vic
 
 ### Hooks
 
-- [useDebounce](https://qwik-hooks.vercel.app/usedebounce)
-- [useLocalStorage](https://qwik-hooks.vercel.app/uselocalstorage)
-- [useCopyClipboard](https://qwik-hooks.vercel.app/usecopytoclipboard)
-- [useWindowSize](https://qwik-hooks.vercel.app/usewindowsize)
-- [usePrevious](https://qwik-hooks.vercel.app/useprevious)
+- [useDebounce](https://qwikhooks.dev/usedebounce)
+- [useLocalStorage](https://qwikhooks.dev/uselocalstorage)
+- [useCopyClipboard](https://qwikhooks.dev/usecopytoclipboard)
+- [useWindowSize](https://qwikhooks.dev/usewindowsize)
+- [usePrevious](https://qwikhooks.dev/useprevious)
+- [useMediaQuery](https://qwikhooks.dev/usemediaquery)
 
 
 ## License
