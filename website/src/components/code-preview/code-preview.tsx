@@ -6,7 +6,6 @@ import {
     useOnWindow,
     useSignal,
     useTask$,
-    useVisibleTask$,
 } from "@builder.io/qwik";
 import { isServer } from "@builder.io/qwik/build";
 import { cn } from "@qwik-ui/utils";
