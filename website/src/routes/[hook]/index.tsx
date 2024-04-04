@@ -1,12 +1,6 @@
 import { component$, useSignal, useTask$ } from "@builder.io/qwik";
 import { useLocation } from "@builder.io/qwik-city";
-import HookCode from "~/components/hooks/hook-code";
-import HookDescription from "~/components/hooks/hook-description";
 import HookHeader from "~/components/hooks/hook-header";
-import HookInstall from "~/components/hooks/hook-install";
-import HookParams from "~/components/hooks/hook-params";
-import HookReturn from "~/components/hooks/hook-return";
-import HooksList from "~/components/hooks/hooks-list";
 import ListOfHooks from "~/docs/index";
 
 export default component$(() => {
@@ -16,6 +10,7 @@ export default component$(() => {
     useTask$(({ track }) => {
         track(() => location.params.hook);
         selectedHook.value = ListOfHooks.find((hook) => hook.key === location.params.hook);
+        console.log(selectedHook.value);
     });
 
     if (!selectedHook.value) {
@@ -31,23 +26,8 @@ export default component$(() => {
     return (
         <div class="w-full max-w-[1024px] my-16 mx-auto">
             <section class="p-5 md:p-[4vw] lg:p-12 pt-0 flex flex-col gap-8 md:gap-[6vw] lg:gap-12 bg-foreground z-0 rounded">
-                <HookHeader
-                    title={selectedHook.value.title}
-                    description={selectedHook.value.highlight}
-                />
-                <HookInstall />
-                <HookDescription description={selectedHook.value.description} />
-                <HookParams params={selectedHook.value.params} />
-                <HookReturn title={selectedHook.value.title} return={selectedHook.value.return} />
-                <HookCode code={selectedHook.value.code} />
+                <span>oli</span>
             </section>
-
-            <div id="hook-install" class="flex flex-col gap-2 bg-background mt-4">
-                <span class="font-bold text-secondary text-base md:text-xl lg:text-xl">
-                    MORE HOOKS:
-                </span>
-                <HooksList />
-            </div>
         </div>
     );
 });
