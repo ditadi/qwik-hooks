@@ -22,6 +22,6 @@ export default {
             description: "The previous value of the provided newValue.",
         },
     ],
-    demo: <UsePreviousDemo />,
+    demo: UsePreviousDemo,
     code: UsePreviousCode,
 } as HookDoc;

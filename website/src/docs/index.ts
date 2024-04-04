@@ -1,5 +1,3 @@
-import type { JSXOutput } from "@builder.io/qwik";
-
 import useCopyClipboard from "./copy-clipboard/doc";
 import useDebounce from "./debounce/doc";
 import useLocalStorage from "./local-storage/doc";
@@ -25,7 +23,7 @@ export interface HookDoc {
     description: string;
     params: HookParams[] | null;
     return: HookReturn[];
-    demo: JSXOutput;
+    demo: any;
     code: string;
 }
 

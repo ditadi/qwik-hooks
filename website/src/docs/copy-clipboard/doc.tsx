@@ -35,6 +35,6 @@ export default {
                 "A boolean signal that indicates whether the copy operation is in progress.",
         },
     ],
-    demo: <UseCopyClipboardDemo />,
+    demo: UseCopyClipboardDemo,
     code: UseCopyClipboardCode,
 } as HookDoc;
