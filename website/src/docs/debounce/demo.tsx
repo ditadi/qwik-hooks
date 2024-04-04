@@ -48,7 +48,7 @@ export default component$(() => {
                     <div class="text-white">No movies found</div>
                 )}
                 {moviesList.value?.Search?.map((movie) => (
-                    <div class="flex gap-1 items-center">
+                    <div key={movie.Title} class="flex gap-1 items-center">
                         <span class="text-white font-bold">{movie.Title as string}</span>
                         <span class="text-white text-sm">{movie.Year as string}</span>
                     </div>

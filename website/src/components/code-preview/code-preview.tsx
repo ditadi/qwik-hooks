@@ -1,9 +1,10 @@
 import {
+    $,
     type ClassList,
     type PropsOf,
     component$,
+    useOnWindow,
     useSignal,
-    useVisibleTask$,
 } from "@builder.io/qwik";
 import { cn } from "@qwik-ui/utils";
 import { CodeCopy } from "./code-copy";
@@ -27,29 +28,32 @@ export default component$(
         ...props
     }: CodePreviewProps) => {
         const codeSig = useSignal("");
-        useVisibleTask$(async function createHighlightedCode() {
-            const highlighter = await highlighterPromise;
-            let modifiedCode: string = code;
+        useOnWindow(
+            "load",
+            $(async () => {
+                const highlighter = await highlighterPromise;
+                let modifiedCode: string = code;
 
-            let partsOfCode = modifiedCode.split(splitCommentStart);
-            if (partsOfCode.length > 1) {
-                modifiedCode = partsOfCode[1];
-            }
+                let partsOfCode = modifiedCode.split(splitCommentStart);
+                if (partsOfCode.length > 1) {
+                    modifiedCode = partsOfCode[1];
+                }
 
-            partsOfCode = modifiedCode.split(splitCommentEnd);
-            if (partsOfCode.length > 1) {
-                modifiedCode = partsOfCode[0];
-            }
+                partsOfCode = modifiedCode.split(splitCommentEnd);
+                if (partsOfCode.length > 1) {
+                    modifiedCode = partsOfCode[0];
+                }
 
-            const str = highlighter.codeToHtml(modifiedCode, {
-                lang: language,
-                themes: {
-                    light: "vitesse-dark",
-                    dark: "vitesse-dark",
-                },
-            });
-            codeSig.value = str.toString();
-        });
+                const str = highlighter.codeToHtml(modifiedCode, {
+                    lang: language,
+                    themes: {
+                        light: "vitesse-dark",
+                        dark: "vitesse-dark",
+                    },
+                });
+                codeSig.value = str.toString();
+            }),
+        );
 
         return (
             <div class="code-example relative max-h-[31.25rem]">

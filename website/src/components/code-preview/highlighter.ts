@@ -8,10 +8,7 @@ import vitesseDark from "shiki/themes/vitesse-dark.mjs";
 import getWasm from "shiki/wasm";
 
 export const highlighter = getHighlighterCore({
-    themes: [
-        // or a dynamic import if you want to do chunk splitting
-        vitesseDark,
-    ],
+    themes: [vitesseDark],
     langs: [html, css, js, ts, tsx],
     loadWasm: getWasm,
 });
