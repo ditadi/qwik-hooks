@@ -3,7 +3,7 @@ import UseLocalStorageCode from "./code";
 import UseLocalStorageDemo from "./demo";
 
 export default {
-    key: "useLocalStorage",
+    key: "uselocalstorage",
     title: "useLocalStorage",
     highlight:
         "Store, retrieve, and synchronize data from the browser’s localStorage API with useLocalStorage",

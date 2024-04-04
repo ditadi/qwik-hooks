@@ -3,7 +3,7 @@ import UseCopyClipboardCode from "./code";
 import UseCopyClipboardDemo from "./demo";
 
 export default {
-    key: "useCopyClipboard",
+    key: "usecopyclipboard",
     title: "useCopyClipboard",
     highlight: "Copy text to the clipboard using useCopyClipboard.",
     description:

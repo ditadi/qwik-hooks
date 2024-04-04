@@ -3,7 +3,7 @@ import UsePreviousCode from "./code";
 import UsePreviousDemo from "./demo";
 
 export default {
-    key: "usePrevious",
+    key: "useprevious",
     title: "usePrevious",
     highlight: "Track the previous value of a variable with usePrevious.",
     description:

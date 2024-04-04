@@ -3,7 +3,7 @@ import UseDebounceCode from "./code";
 import UseDebounceDemo from "./demo";
 
 export default {
-    key: "useDebounce",
+    key: "usedebounce",
     title: "useDebounce",
     highlight: "Delay the execution of function or state update with useDebounce.",
     description:

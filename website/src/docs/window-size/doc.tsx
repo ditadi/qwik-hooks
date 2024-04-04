@@ -3,7 +3,7 @@ import UseWindowSizeCode from "./code";
 import UseWindowSizeDemo from "./demo";
 
 export default {
-    key: "useWindowSize",
+    key: "usewindowsize",
     title: "useWindowSize",
     highlight: "Track the dimensions of the browser window with useWindowSize.",
     description:
