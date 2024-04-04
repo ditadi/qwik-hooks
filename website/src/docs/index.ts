@@ -1,6 +1,7 @@
 import useCopyClipboard from "./copy-clipboard/doc";
 import useDebounce from "./debounce/doc";
 import useLocalStorage from "./local-storage/doc";
+import useMediaQuery from "./media-query/doc";
 import usePrevious from "./previous/doc";
 import useWindowSize from "./window-size/doc";
 
@@ -33,4 +34,5 @@ export default [
     useCopyClipboard,
     useWindowSize,
     usePrevious,
+    useMediaQuery,
 ] as HookDoc[];

@@ -5,7 +5,10 @@ import {
     component$,
     useOnWindow,
     useSignal,
+    useTask$,
+    useVisibleTask$,
 } from "@builder.io/qwik";
+import { isServer } from "@builder.io/qwik/build";
 import { cn } from "@qwik-ui/utils";
 import { CodeCopy } from "./code-copy";
 import { highlighter as highlighterPromise } from "./highlighter";
@@ -28,32 +31,38 @@ export default component$(
         ...props
     }: CodePreviewProps) => {
         const codeSig = useSignal("");
-        useOnWindow(
-            "load",
-            $(async () => {
-                const highlighter = await highlighterPromise;
-                let modifiedCode: string = code;
 
-                let partsOfCode = modifiedCode.split(splitCommentStart);
-                if (partsOfCode.length > 1) {
-                    modifiedCode = partsOfCode[1];
-                }
+        const generateHighlighter = $(async () => {
+            const highlighter = await highlighterPromise;
+            let modifiedCode: string = code;
 
-                partsOfCode = modifiedCode.split(splitCommentEnd);
-                if (partsOfCode.length > 1) {
-                    modifiedCode = partsOfCode[0];
-                }
+            let partsOfCode = modifiedCode.split(splitCommentStart);
+            if (partsOfCode.length > 1) {
+                modifiedCode = partsOfCode[1];
+            }
 
-                const str = highlighter.codeToHtml(modifiedCode, {
-                    lang: language,
-                    themes: {
-                        light: "vitesse-dark",
-                        dark: "vitesse-dark",
-                    },
-                });
-                codeSig.value = str.toString();
-            }),
-        );
+            partsOfCode = modifiedCode.split(splitCommentEnd);
+            if (partsOfCode.length > 1) {
+                modifiedCode = partsOfCode[0];
+            }
+
+            const str = highlighter.codeToHtml(modifiedCode, {
+                lang: language,
+                themes: {
+                    light: "vitesse-dark",
+                    dark: "vitesse-dark",
+                },
+            });
+            codeSig.value = str.toString();
+        });
+
+        useTask$(({ track }) => {
+            track(() => code);
+            if (isServer) return;
+            generateHighlighter();
+        });
+
+        useOnWindow("load", generateHighlighter);
 
         return (
             <div class="code-example relative max-h-[31.25rem]">
