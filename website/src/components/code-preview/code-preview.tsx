@@ -1,4 +1,10 @@
-import { type ClassList, type PropsOf, component$, useSignal, useTask$ } from "@builder.io/qwik";
+import {
+    type ClassList,
+    type PropsOf,
+    component$,
+    useSignal,
+    useVisibleTask$,
+} from "@builder.io/qwik";
 import { cn } from "@qwik-ui/utils";
 import { CodeCopy } from "./code-copy";
 import { highlighter as highlighterPromise } from "./highlighter";
@@ -21,7 +27,8 @@ export default component$(
         ...props
     }: CodePreviewProps) => {
         const codeSig = useSignal("");
-        useTask$(async function createHighlightedCode() {
+
+        useVisibleTask$(async function createHighlightedCode() {
             const highlighter = await highlighterPromise;
             let modifiedCode: string = code;
 
