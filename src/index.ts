@@ -4,3 +4,4 @@ export { useDebounce } from "./use-debounce";
 export { useLocalStorage } from "./use-local-storage";
 export { usePrevious } from "./use-previous";
 export { useMediaQuery } from "./use-media-query";
+export { useOrientation } from "./use-orientation";
