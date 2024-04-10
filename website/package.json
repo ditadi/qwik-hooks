@@ -29,7 +29,7 @@
     "@builder.io/qwik": "^1.5.1",
     "@builder.io/qwik-city": "^1.5.1",
     "@builder.io/qwik-labs": "github:BuilderIo/qwik-labs-build#main",
-    "@ditadi/qwik-hooks": "0.1.5",
+    "@ditadi/qwik-hooks": "0.1.6-beta.1",
     "@fontsource-variable/fira-code": "^5.0.17",
     "@fontsource-variable/outfit": "^5.0.12",
     "@qwik-ui/headless": "^0.3.3",
