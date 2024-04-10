@@ -7,7 +7,7 @@ export default component$(() => {
     return (
         <div class="flex justify-between">
             <Link href="/">
-                {location.url.pathname === "/" ? null : (
+                {location.url.pathname !== "/" && (
                     <span class="text-white font-medium text-center items-center flex hover:underline">
                         <LuChevronLeft class="mr-2" />
                         All Hooks

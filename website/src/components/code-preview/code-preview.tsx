@@ -57,7 +57,7 @@ export default component$(
 
         useTask$(({ track }) => {
             track(() => code);
-            if (isServer) return;
+            if (isServer || !code) return;
             generateHighlighter();
         });
 

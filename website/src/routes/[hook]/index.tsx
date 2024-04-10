@@ -30,7 +30,7 @@ export default component$(() => {
     }
 
     return (
-        <div class="w-full max-w-[1024px] my-16 mx-auto">
+        <div class="w-full max-w-[1024px] my-16 mx-auto" id="hook-main">
             <section class="p-5 md:p-[4vw] lg:p-12 pt-0 flex flex-col gap-8 md:gap-[6vw] lg:gap-12 bg-foreground z-0 rounded">
                 <HookHeader
                     title={selectedHook.value.title}
@@ -41,7 +41,7 @@ export default component$(() => {
                 <HookParams params={selectedHook.value.params} />
                 <HookReturn title={selectedHook.value.title} return={selectedHook.value.return} />
                 <HookDemo demo={selectedHook.value.demo} />
-                <HookCode code={selectedHook.value.code} />
+                <HookCode code={selectedHook.value?.code} />
             </section>
 
             <div id="hook-install" class="flex flex-col gap-2 bg-background mt-4">
