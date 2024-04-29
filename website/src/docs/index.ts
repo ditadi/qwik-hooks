@@ -4,6 +4,7 @@ import useLocalStorage from "./local-storage/doc";
 import useMediaQuery from "./media-query/doc";
 import usePrevious from "./previous/doc";
 import useWindowSize from "./window-size/doc";
+import useClickOutside from "./click-outside/doc";
 
 export interface HookParams {
     name: string;
@@ -35,4 +36,5 @@ export default [
     useWindowSize,
     usePrevious,
     useMediaQuery,
+    useClickOutside,
 ] as HookDoc[];
