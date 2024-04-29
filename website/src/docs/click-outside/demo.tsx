@@ -1,6 +1,6 @@
 import { $, component$, useSignal } from "@builder.io/qwik";
+import { useClickOutside } from "@ditadi/qwik-hooks";
 import { Button } from "~/components/ui/button/button";
-import { useClickOutside } from "../../../../src";
 
 export default component$(() => {
     const isDialogOpen = useSignal(false);

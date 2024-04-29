@@ -16,6 +16,8 @@ A collection of modern qwik hooks – from the [@ditadi](https://twitter.com/vic
 - [useWindowSize](https://qwikhooks.dev/usewindowsize)
 - [usePrevious](https://qwikhooks.dev/useprevious)
 - [useMediaQuery](https://qwikhooks.dev/usemediaquery)
+- [useOrientation](https://qwikhooks.dev/useOrientation)
+- [useClickOutside](https://qwikhooks.dev/useClickOutside)
 
 
 ## License
