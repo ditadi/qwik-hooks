@@ -1,7 +1,7 @@
 import { $, type QRL, type Signal, useOnWindow, useSignal, useTask$ } from "@builder.io/qwik";
 import { isServer } from "@builder.io/qwik/build";
 
-type UseLocalStorageResponse<T> = {
+export type UseLocalStorageResponse<T> = {
     storedValue: Signal<T | null>;
     setStoredValue: QRL<(newValue: T | null) => void>;
 };
