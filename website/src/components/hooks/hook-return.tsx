@@ -7,6 +7,11 @@ type HookReturnProps = {
 };
 
 export default component$<HookReturnProps>((props) => {
+
+    if (!props.return) {
+        return null;
+    }
+
     return (
         <div id="hook-return" class="flex flex-col gap-8">
             <span class="font-bold text-secondary text-base md:text-xl lg:text-xl">

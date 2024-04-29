@@ -1,5 +1,4 @@
 export default `
-s
 import { component$ } from "@builder.io/qwik";
 import { useLocalStorage } from "@ditadi/qwik-hooks";
 import { Button } from "~/components/ui/button/button";

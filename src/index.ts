@@ -5,3 +5,4 @@ export { useLocalStorage } from "./use-local-storage";
 export { usePrevious } from "./use-previous";
 export { useMediaQuery } from "./use-media-query";
 export { useOrientation } from "./use-orientation";
+export { useClickOutside } from "./use-click-outside";
