@@ -10,14 +10,14 @@ A collection of modern qwik hooks – from the [@ditadi](https://twitter.com/vic
 
 ### Hooks
 
-- [useDebounce](https://qwikhooks.dev/usedebounce)
-- [useLocalStorage](https://qwikhooks.dev/uselocalstorage)
-- [useCopyClipboard](https://qwikhooks.dev/usecopytoclipboard)
-- [useWindowSize](https://qwikhooks.dev/usewindowsize)
-- [usePrevious](https://qwikhooks.dev/useprevious)
-- [useMediaQuery](https://qwikhooks.dev/usemediaquery)
-- [useOrientation](https://qwikhooks.dev/useOrientation)
-- [useClickOutside](https://qwikhooks.dev/useClickOutside)
+- [useDebounce](https://www.qwikhooks.dev/usedebounce/)
+- [useLocalStorage](https://www.qwikhooks.dev/uselocalstorage/)
+- [useCopyClipboard](https://www.qwikhooks.dev/usecopytoclipboard/)
+- [useWindowSize](https://www.qwikhooks.dev/usewindowsize/)
+- [usePrevious](https://www.qwikhooks.dev/useprevious/)
+- [useMediaQuery](https://www.qwikhooks.dev/usemediaquery/)
+- [useOrientation](https://www.qwikhooks.dev/useorientation/)
+- [useClickOutside](https://qwikhooks.dev/useclickoutside/)
 
 
 ## License
