@@ -3,6 +3,7 @@
     "version": "0.1.6",
     "type": "module",
     "description": "A collection of modern, server-safe qwik hooks",
+    "license": "MIT",
     "devDependencies": {
         "@biomejs/biome": "^1.6.3",
         "@commitlint/cli": "^19.2.1",
